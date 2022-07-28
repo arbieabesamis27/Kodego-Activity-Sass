@@ -1,185 +1,114 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto:wght@400;700&display=swap");
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #24252A;
+  padding: 30px 10%;
+}
+header .logo {
+  cursor: pointer;
+}
+header .nav-links {
+  list-style: none;
+}
+header .nav-links li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+header .nav-links li a {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #edf0f1;
+  text-decoration: none;
+  transition: all 0.4s ease;
+}
+header .nav-links li a:hover {
+  color: #0088a9;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  background-color: #edf0f1;
+  flex-grow: 1;
+}
+@media screen and (max-width: 426px) {
+  main {
+    flex-direction: column;
+  }
+}
+
+section {
+  flex-grow: 1;
+  text-align: center;
+}
+section h1 {
+  font-size: 36px;
+}
+
+aside {
+  width: 200px;
+  background-color: #0088a9;
+  text-align: center;
+}
+@media screen and (max-width: 426px) {
+  aside {
+    width: 100%;
+  }
+}
+aside h3 {
+  font-size: 24px;
+}
+
+footer {
+  background-color: #24252A;
+  height: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer p {
+  color: #edf0f1;
+  font-size: 16px;
+  margin: 0;
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
   font-family: "Roboto", sans-serif;
-  margin: auto;
-  max-width: 1440px;
-  height: 100vh;
+  margin: 0;
+  padding: 0;
 }
 
-nav {
+main {
   display: flex;
-  height: 10vh;
-  align-items: center;
-  background-color: aqua;
-  overflow: hidden;
+  justify-content: space-between;
+  background-color: #edf0f1;
+  flex-grow: 1;
 }
 @media screen and (max-width: 426px) {
-  nav {
-    height: 15vh;
+  main {
     flex-direction: column;
   }
 }
-nav .logo {
-  position: relative;
-  margin-left: 10px;
-}
-nav .logo a::before {
-  content: "MY";
-  position: absolute;
-  inset: 0;
-  color: red;
-}
-nav a {
-  display: inline-block;
-  text-decoration: none;
-  font-size: 24px;
-  font-weight: 400;
-  padding: 10px 20px;
-}
-nav .nav {
-  margin-left: auto;
-  padding-right: 30px;
-}
-nav .nav a {
-  color: #fff;
-}
-@media screen and (max-width: 768px) {
-  nav .nav a {
-    font-size: 20px;
-  }
-}
-@media screen and (max-width: 426px) {
-  nav .nav a {
-    font-size: 18px;
-  }
-}
-nav .nav a:hover {
-  color: red;
-}
 
-.main {
+.container {
   display: flex;
-  height: 80vh;
-}
-.main section {
-  padding: 20px;
-  background-color: azure;
-  height: 100%;
-  width: 85vw;
-}
-@media screen and (max-width: 768px) {
-  .main section {
-    width: 80vw;
-  }
-}
-@media screen and (max-width: 426px) {
-  .main section {
-    width: 70vw;
-  }
-}
-.main section h1 {
-  font-size: 40px;
-  width: 50%;
-}
-@media screen and (max-width: 768px) {
-  .main section h1 {
-    font-size: 30px;
-    margin-top: 10px;
-  }
-}
-@media screen and (max-width: 426px) {
-  .main section h1 {
-    font-size: 20px;
-    margin-top: 0;
-  }
-}
-.main section div {
-  display: flex;
-}
-@media screen and (max-width: 768px) {
-  .main section div {
-    display: block;
-  }
-}
-.main section div img {
-  width: 50%;
-}
-@media screen and (max-width: 768px) {
-  .main section div img {
-    width: 75%;
-  }
-}
-@media screen and (max-width: 426px) {
-  .main section div img {
-    width: 90%;
-  }
-}
-.main section div p {
-  padding: 20px;
-  margin: 0;
-  line-height: 30px;
-  font-size: 18px;
-  width: 90%;
-}
-@media screen and (max-width: 768px) {
-  .main section div p {
-    line-height: 25px;
-    font-size: 16px;
-    padding: 0;
-    padding-top: 20px;
-  }
-}
-@media screen and (max-width: 426px) {
-  .main section div p {
-    line-height: 24px;
-    font-size: 16px;
-  }
-}
-.main aside {
-  padding: 20px;
-  background-color: bisque;
-  width: 15vw;
-}
-@media screen and (max-width: 768px) {
-  .main aside {
-    width: 20vw;
-  }
-}
-@media screen and (max-width: 426px) {
-  .main aside {
-    width: 30vw;
-  }
-}
-.main aside ul {
-  list-style: none;
-  padding-left: 0;
-}
-.main aside ul li {
-  padding: 10px;
-}
-.main aside ul li a {
-  text-decoration-line: none;
-  color: black;
-}
-.main aside ul li a:hover {
-  color: red;
-}
-
-footer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: gray;
-  height: 10vh;
-  text-align: center;
+  flex-direction: column;
+  height: 100vh;
   overflow: hidden;
-}
-footer p {
-  color: white;
 }
 
 /*# sourceMappingURL=styles.css.map */

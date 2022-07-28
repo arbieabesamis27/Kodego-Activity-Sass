@@ -1,0 +1,9 @@
+main {
+    display: flex;
+    justify-content: space-between;
+    background-color: $off-white;
+    flex-grow: 1;
+    @media screen and (max-width: 426px) {
+        flex-direction: column;
+    }
+}

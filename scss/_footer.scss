@@ -1,0 +1,12 @@
+footer {
+    background-color: $dark-gray;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    p {
+        color: $off-white;
+        font-size: $font-sm-size;
+        margin: 0;
+    }
+}
